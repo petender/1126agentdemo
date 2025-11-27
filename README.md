@@ -23,11 +23,13 @@ If you want to replicate this scenario, open GitHub Copilot Agent Mode on your d
 
 1. **Player Name Input**: Enter your name at the start
 2. **Shooter**: Green triangle shooter positioned at the bottom middle of the screen
-3. **Random Targets**: Red bullseye targets appear at random positions
-4. **Space Bar Controls**: Press SPACE to shoot
-5. **Reaction Time**: Measures time between target appearing and your shot
-6. **Win Condition**: React within 0.3 seconds to win!
-7. **Results Display**: Shows "YOU WIN!" or "YOU ARE TOO SLOW" based on your performance
+3. **Random Targets**: Large red/blue dotted targets appear at random positions
+4. **Color-Switching Mechanic**: Targets alternate between RED and BLUE every 0.5 seconds
+5. **Space Bar Controls**: Press SPACE to shoot - but ONLY when the target is RED!
+6. **Reaction Time**: Measures time between target appearing and your shot
+7. **Win Condition**: React within 0.6 seconds when target is RED to win!
+8. **Lose Condition**: Shoot when target is BLUE and you lose immediately!
+9. **Results Display**: Shows "YOU WIN!", "YOU ARE TOO SLOW", or "YOU LOSE!" based on your performance
 
 ## Installation
 
@@ -43,19 +45,28 @@ python reflex_shooter.py
 
 1. Enter your name when prompted
 2. Wait for the "GET READY!" countdown
-3. When the target appears, press SPACE as quickly as possible
-4. Your reaction time will be displayed along with the result
-5. Press SPACE to play again or ESC to quit
+3. **Watch the target carefully** - it will switch between RED and BLUE colors
+4. **ONLY shoot when the target is RED** - press SPACE as quickly as possible
+5. **DO NOT shoot when the target is BLUE** - you will lose immediately!
+6. Your reaction time will be displayed along with the result
+7. Choose to play again or quit
 
 ## Controls
 
 - **Type**: Enter your name
 - **ENTER**: Confirm name input
-- **SPACE**: Shoot / Play again
-- **ESC**: Quit game
+- **SPACE**: Shoot (ONLY when target is RED!)
+- **Ctrl+C**: Quit game
+
+## Game Rules
+
+- 🔴 **RED Target**: SHOOT! Press SPACE as fast as you can
+- 🔵 **BLUE Target**: DON'T SHOOT! Wait for it to turn red
+- ⏱️ **Time Limit**: React within 0.6 seconds when target is RED
+- ❌ **Instant Loss**: Shooting on BLUE means immediate game over
 
 ## Win Condition
 
-React in less than 0.3 seconds (300 milliseconds) to win!
+React in less than 0.6 seconds (600 milliseconds) while the target is RED to win!
 
 Have fun testing your reflexes! 🎯
